@@ -4,6 +4,19 @@
     <title>weeb</title>
     <link rel="stylesheet" type="text/css" href="css/common.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <style>
+      #camera-container,#camera,#webcam,#overlay,#overlay2,#overlay3{
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        height: 150px !important;
+      }
+      #camera{
+        height: 0px !important;
+      }
+      
+
+    </style>
   </head>
 
   <body>
@@ -318,7 +331,8 @@
           workerManager.postMessage("facemesh", imageData);
         }
 
-        if (options.get("posenet")) {
+        //if (options.get("posenet")) {
+        if (true) {
           stats.posenet.begin();
           workerManager.postMessage("posenet", imageData);
         }
